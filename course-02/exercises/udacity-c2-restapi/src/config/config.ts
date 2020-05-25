@@ -9,6 +9,9 @@ export const config = {
     "aws_profile": process.env.UDACITY_POSTGRESS_AWS_PROFILE,
     "aws_media_bucket": process.env.UDACITY_POSTGRESS_AWS_MEDIA_BUCKET
   },
+  "jwt":{
+    "secret": process.env.UDACITY_JWT_SECRET
+  },
   "prod": {
     "username": "",
     "password": "",
