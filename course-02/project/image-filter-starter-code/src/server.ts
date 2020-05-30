@@ -42,7 +42,7 @@ import {deleteLocalFiles, filterImageFromURL} from './util/util';
             return res.status(400).send("image url is invalid.");
         }
 
-        filterImageFromURL(image_url).then((filteredPath) => {
+        filterImageFromURL(image_url).then((filteredPath : string) => {
             res.status(200).sendFile(filteredPath);
             return res.on("finish", () => deleteLocalFiles([filteredPath]));
         }).catch(() => res.status(422).send("Ops! Something went wrong!"));
